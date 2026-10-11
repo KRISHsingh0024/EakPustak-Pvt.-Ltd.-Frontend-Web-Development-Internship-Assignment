@@ -4,6 +4,7 @@ import { X, Play, School, ArrowRight, ShieldCheck, Award, Building2 } from 'luci
 
 export const HeroSection: React.FC = () => {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const campusHeroImage = `${import.meta.env.BASE_URL}images/campus_hero_highres.jpg`;
 
   return (
     <section className="relative w-full min-h-[620px] lg:min-h-[660px] flex items-center overflow-hidden bg-[#0B1929]">
@@ -11,7 +12,7 @@ export const HeroSection: React.FC = () => {
       <div
         className="absolute inset-0 z-0 w-full h-full bg-cover bg-right lg:bg-center"
         style={{
-          backgroundImage: `url('/images/campus_hero_highres.jpg')`,
+          backgroundImage: `url('${campusHeroImage}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center right',
           backgroundRepeat: 'no-repeat',
@@ -141,7 +142,7 @@ export const HeroSection: React.FC = () => {
             </h3>
             <div className="relative aspect-video rounded-xl overflow-hidden bg-[#0B1929] mb-4 border border-[#E3E8ED]">
               <img
-                src="/images/campus_hero_highres.jpg"
+                src={campusHeroImage}
                 alt="EAK Campus Panoramic"
                 className="w-full h-full object-cover"
               />
