@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-navy: #10243A;
+    --color-navy-dark: #0B1929;
+    --color-gold: #D6A449;
+    --color-gold-dark: #B98428;
+    --color-gold-light: #F5E7C8;
+    --color-brand-bg: #FBFAF7;
+    --color-brand-text: #172435;
+    --color-border: #E3E8ED;
+  }
+
+  body {
+    background-color: #FBFAF7;
+    color: #172435;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-dark {
+    background: rgba(11, 25, 41, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #D6A449 0%, #F5E7C8 50%, #B98428 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .signature-font {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F5F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid #D6A449;
+  outline-offset: 2px;
+}
